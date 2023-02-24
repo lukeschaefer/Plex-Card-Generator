@@ -1,0 +1,24 @@
+{
+  "name": "plex-card-generator",
+  "version": "1.0.0",
+  "description": "Generates a card for each movie in a plex library/collection",
+  "main": "render.js",
+  "scripts": {
+    "start": "npx tsc && node build/render.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "color-thief-node": "^1.0.4",
+    "colorthief": "^2.3.2",
+    "fast-xml-parser": "^4.0.10",
+    "minimist": "^1.2.6",
+    "puppeteer": "^18.0.5"
+  },
+  "devDependencies": {
+    "@types/minimist": "^1.2.2",
+    "@types/node": "^18.7.23",
+    "typescript": "^4.8.4"
+  }
+}

@@ -1,0 +1,121 @@
+<html>
+<head>
+
+<style>
+
+
+html, body {
+	padding: 0px;
+	margin: 0;
+	overflow: hidden;
+	box-sizing: border-box;
+	width: 100vw;
+	height: 100vh;
+	--theme-color: {{themeColor}};
+	--text-color: {{textColor}};
+}
+
+html{
+	background-size: cover;
+	background-position: center center;
+	background: url('./background.png');
+	background-color: var(--theme-color);
+	background-blend-mode: luminosity;
+}
+
+body {
+	padding: 9vh;
+	font-family: sans-serif;
+	display: flex;
+	flex-direction: column;
+	justify-content: stretch;
+
+}
+
+#details {
+	display: flex;
+	flex-direction: row;
+	flex-grow: 1;
+	height: 65vh;
+}
+
+@font-face {
+    font-family: pat;
+    src: url(PatrickHand-Regular.ttf);
+}
+
+@font-face {
+    font-family: edo;
+    src: url(PermanentMarker-Regular.ttf);
+}
+
+@font-face {
+    font-family: bayon;
+    src: url(bayon.ttf);
+}
+  
+h1 {
+	font-size: 10vh;
+    color: white;
+	filter: saturate(1.25);
+    font-family: edo;
+    font-weight: 100;
+    margin-top: 0vh;
+	white-space: nowrap;
+    margin-bottom: 2vh;
+    text-shadow: 0px 0px 2vw var(--theme-color), 0px 0px 2vw rgba(0,0,0,.5);
+}
+
+img {
+    display: block;
+    background: black;
+    box-sizing: border-box;
+    height: 100%;
+	max-height: calc(100% - 2.5vw);
+}
+
+p {
+	margin-top: 0;
+	color: var(--text-color);
+	font-size: 6vh;
+	font-family: pat;
+	text-align: justify;
+	line-height: 6.2vh;
+	margin-left: 2vw;
+	text-shadow: 0px 0px 0.6vw rgb(0 0 0);
+}
+
+#metadata {
+    color: black;
+    font-size: 3vh;
+    font-family: bayon;
+    text-transform: uppercase;
+    font-weight: 100;
+    line-height: 5vh;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+#poster-holder {
+	display: flex;
+	flex-direction: column;
+	max-width: 45%;
+	background: var(--theme-color);
+	padding: 1vw;
+	border-radius: 0.5vmax;
+    box-shadow: 0px 1vh 2vw;
+}
+</style>
+</head>
+<body>
+<h1 id="title">{{title}}</h1>
+<div id="details">
+	<div id="poster-holder">
+		<img id="poster" src="{{posterUrl}}"/>
+		<span id="metadata"><span>{{year}}</span><span>{{duration}}</span><span>{{contentRating}}</span></span>
+	</div>
+	<p id="summary">{{summary}}</p>
+</div>
+</body>
+</html>
